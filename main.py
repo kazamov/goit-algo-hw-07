@@ -24,18 +24,18 @@ def insert(node, key):
     return node
 
 
-def min_value_node(node):
+def min_value(node):
     current = node
     while current.left:
         current = current.left
-    return current
+    return current.val
 
 
-def max_value_node(node):
+def max_value(node):
     current = node
     while current.right:
         current = current.right
-    return current
+    return current.val
 
 
 def sum_nodes(node):
@@ -54,6 +54,6 @@ if __name__ == "__main__":
     root_node = insert(root_node, 6)
     root_node = insert(root_node, 8)
 
-    print(max_value_node(root_node))
-    print(min_value_node(root_node))
+    print(max_value(root_node))
+    print(min_value(root_node))
     print(sum_nodes(root_node))
